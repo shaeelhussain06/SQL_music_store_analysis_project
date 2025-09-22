@@ -1,4 +1,5 @@
 # SQL_music_store_analysis_project
+
 SQL project to analyze online music store data
 
 /* Who is the senior most employee based on job title? */
@@ -214,6 +215,9 @@ WITH RECURSIVE
 SELECT cc.billing_country, cc.total_spending, cc.first_name, cc.last_name, cc.customer_id
 FROM customter_with_country cc
 JOIN country_max_spending ms
+
+Author - Shaeel Hussain
+
 ON cc.billing_country = ms.billing_country
 WHERE cc.total_spending = ms.max_spending
 ORDER BY 1;
